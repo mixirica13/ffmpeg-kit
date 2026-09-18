@@ -9,6 +9,9 @@ jobs:
   publish-lts-on-linux:
     name: android lts on linux
     runs-on: ubuntu-24.04
+    # Publishing the .aar as a release is the only write this job does.
+    permissions:
+      contents: write
     defaults:
       run:
         shell: bash
